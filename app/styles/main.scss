@@ -1,31 +1,150 @@
 // bower:scss
 // endbower
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
+  @extend html;
+  margin: 0;
+  padding: 0;
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  overflow: hidden;
+}
+body.on {
+  overflow: visible
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+img {
+  max-width: 100%;
+}
+.red-bg {
+  background-color: #d24a43;
+}
+.full {
+  position: absolute;
+  @extend html;
+  top: 0;
+  color: #fff;
+  display: none;
+
+  p {
+    font-size: 38px;
+  }
+  a.get-code {
+    background-color: #f6ed46;
+    color: #000;
+    font-size: 30px;
+  }
+  .logo {
+    position: relative;
+    margin-top: 20px;
+    text-align: right;
+    img {
+      width: 40%;
+      max-width: 160px;
+      bottom: 0;
+      right: 0;
+      padding-right: 10px;
+    }
   }
 }
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+a.btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+}
+.va-m {
+  text-align: center;
+}
+.va-m:before {
+  content: "";
+  height: 100%;
+  margin-right: -6px;
+  @extend .d-ib;
+}
+.d-ib {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header {
+  text-align: center;
+  img {
+    width: 50%;
+    max-width: 200px;
+    margin: 10px 0;
+  }
+}
+.main {
+  text-align: center;
+  p.text {
+    font-size: 26px;
+    color: #fff;
+  }
+  .scratch {
+    position: relative;
+    height: 200px;
+    canvas {
+      top: 0;
+      left: 0;
+    }
+  }
+  .btn {
+    display: inline-block;
+    color: #d24a43;
+    font-size: 20px;
+    width: 40%;
+    margin: 20px 4%;
+    background-image: url(../images/save.png);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: auto 70%;
+    background-color: #fff;
+  }
+  .btn.email {
+    background-image: url(../images/mail.png);
+  }
+}
+.how-to {
+  text-align: center;
+  h2 {
+    color: #d24a43;
+    font-size: 38px;
+  }
+  table {
+    text-align: left;
+    td:first-child {
+      color: #d24a43;
+      font-size: 38px;
+    }
+    td {
+      font-size: 20px
+    }
+  }
+}
+.grey {
+  background-color: #E7E7E8;
+  text-align: center;
+  .btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    width: 40%;
+    margin: 20px 4%;
+    background-color: #d24a43;
+  }
+}
+.more {
+  font-size: 12px
 }
