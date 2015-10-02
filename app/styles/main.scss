@@ -2,6 +2,7 @@
 // endbower
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 html {
   width: 100%;
@@ -89,12 +90,29 @@ header {
 .main {
   text-align: center;
   p.text {
+    display: block;
     font-size: 26px;
     color: #fff;
+    margin: 0;
+    padding: 25px 0;
   }
   .scratch {
     position: relative;
     height: 200px;
+    .action-help {
+      position: absolute;
+      @extend html;
+      top: 0;
+      font-size: 38px;
+      color: #fff;
+      z-index: 100;
+      pointer-events: none;
+      background-image: url("../images/hand.png");
+      background-repeat: no-repeat;
+      background-position: 85% 100%;
+      background-size: auto 55%;
+      animation: hand 2.5s linear 0s infinite normal both;
+    }
     canvas {
       top: 0;
       left: 0;
@@ -147,4 +165,15 @@ header {
 }
 .more {
   font-size: 12px
+}
+@keyframes hand {
+  0% {
+    background-position: -10% 100%;
+  }
+  80% {
+    background-position: 110% 100%;
+  }
+  100% {
+    background-position: 110% 100%;
+  }
 }
